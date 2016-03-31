@@ -1,7 +1,7 @@
 Mailjet Parse API Starter Kit
 ==
 
-This starter kit helps you get started with the Parse API quickly. 
+This starter kit helps you get started with the Parse API quickly.
 
 Getting a webhook URL
 --
@@ -9,7 +9,7 @@ Getting a webhook URL
 
 To use Mailjet's Parse API, you'll need a webhook URL. An easy way to get one is to use [ngrok](https://ngrok.com/) as it enables you to create secure tunnels to localhost. Download and install it.
 
-Once it's done, 
+Once it's done,
 1. `git clone` this repo
 2. `npm install` it to download dependencies
 3. run it with `node server.js`
@@ -19,7 +19,7 @@ Creating a parse route
 --
 Simply follow the instructions [here](http://dev.mailjet.com/guides/?shell#basic-setup) to create a `parseroute`. You'll get a response with the email address ready to be used with your webhook.
 
-I recommend specifying a `/parse` route (**server.js** is listening to your webhook on the `/parse` route). Eg: https://username:password@www.example.com/parse. You can still change the route but don't forget to change it in **server.js** too.
+I recommend specifying a `/parse` route (**server.js** is listening to your webhook on the `/parse` route). Eg: [https://username:password@www.example.com/parse](). You can still change the route but don't forget to change it in **server.js** too.
 
 Listening to your webhook
 --
