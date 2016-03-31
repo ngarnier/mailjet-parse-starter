@@ -10,10 +10,10 @@ Getting a webhook URL
 To use Mailjet's Parse API, you'll need a webhook URL. An easy way to get one is to use [ngrok](https://ngrok.com/) as it enables you to create secure tunnels to localhost. Download and install it.
 
 Once it's done,
-1. `git clone` this repo
-2. `npm install` it to download dependencies
-3. run it with `node server.js`
-4. in a different terminal, create a tunnel with the command `ngrok http 3000` (you can change the port, but don't forget to also change it in **server.js** as it is configured to 3000 by default)
+  1. `git clone` this repo
+  2. `npm install` it to download dependencies
+  3. run it with `node server.js`
+  4. in a different terminal, create a tunnel with the command `ngrok http 3000` (you can change the port, but don't forget to also change it in **server.js** as it is configured to 3000 by default)
 
 Creating a parse route
 --
