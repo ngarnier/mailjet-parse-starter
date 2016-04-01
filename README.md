@@ -46,5 +46,5 @@ curl -s -X PUT \
 --user "$MJ_APIKEY_PUBLIC:$MJ_APIKEY_PRIVATE" \
 https://api.mailjet.com/v3/REST/parseroute/:Email \
 -H 'Content-Type: application/json' \
--d '{"Url": "New ngrok URL"}'
+-d '{"Url": "**$NEW NGROK URL**"}'
 ```
