@@ -27,3 +27,24 @@ Listening to your webhook
 All you have to do now is write the magic in **server.js**. By default, **server.js** console.logs the content of the payload. Feel free to do whatever you want with this content!  
 
 Once it's done, just `node server.js` and `ngrok http 3000` to get your server and your tunnel up and running! Each time the email address associated with your webhook receives an email, your code magic will execute!
+
+Updating your parseroute
+--
+Each time you will restart ngrok, the tunnel URL to your localhost will change, this means you'll have to update it on Mailjet too. Don't worry, it's pretty easy to do.
+
+### Get the parseroute ID
+```
+curl -s -X GET \
+--user "$MJ_APIKEY_PUBLIC:$MJ_APIKEY_PRIVATE" \
+https://api.mailjet.com/v3/REST/parseroute
+```
+You'll get a response with the different parseroutes you configured on your account. Save the "ID".
+
+### Update the parseroute
+```
+curl -s -X PUT \
+--user "$MJ_APIKEY_PUBLIC:$MJ_APIKEY_PRIVATE" \
+https://api.mailjet.com/v3/REST/parseroute/:Email \
+-H 'Content-Type: application/json' \
+-d '{"Url": "New ngrok URL"}'
+```
